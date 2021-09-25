@@ -14,7 +14,7 @@ function generatePassword() {
 	randomPassword = "";
 	passwordLength = 0;
 	newRandomCharacter = "";
-	// Prompt user to type in a number between 8 and 128 to determine the length of the random password
+	// Prompt user to type in a number between 8 and 128 to determine the length of the random password. If they don't, the while loop will prompt them with the same question until they properly follow the instructions
 	while (passwordLength < 8 || passwordLength > 128) {
 		// This length will be used in a for loop to iterate through the array of characters
 		passwordLength = prompt('How long would you like your new password to be? (choose a number between 8 and 128)');
@@ -59,9 +59,7 @@ function writePassword() {
 	if (password === null) passwordText.value = "You can't generate a password without characters...";
 	// otherwise, we set the value property of textarea HTML tag to be the password that was randomly generated, which will automatically populate the textarea box on the page
 	else passwordText.value = password;
-	return;
 }
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
-
-// Only used 40 lines of code
+// Only used 39 lines of code
