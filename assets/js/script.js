@@ -3,17 +3,11 @@ var numberCharacters = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
 var uppercaseCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 var lowercaseCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var specialCharacters = [ '!', '@', '#', '$', '%', '^', '&', '*' ];
-// Declare variable for the final "random password" result
-var randomPassword;
-// Declare variable for the desired password length
-var passwordLength;
-// Declare variable for the characters to be randomly selected from to construct final random password
-var passwordCharacters;
-// Declare variable for the random characters that will be chosen at random to construct final password string
-var newRandomCharacter;
-// Assignment Code
+// Declare variable for the final "random password" result, for the desired password length, for the characters to be randomly selected from to construct final random password, and for the random characters that will be chosen at random to construct final password string, respectively
+var randomPassword, passwordLength, passwordCharacters, newRandomCharacter;
+// Select button element with id og #generate and store in variable generateBtn
 var generateBtn = document.querySelector('#generate');
-// Create generate password function
+// Create generate password function to generate a random password for user based on specified criteria
 function generatePassword() {
 	// Assign declared variable to be empty stings, empty arrays, or zero based on desired built-in type. We do this here so that if the user wants to generate a new password without refreshing the page, they can just click the button again and the values will be reset each time
 	passwordCharacters = [];
@@ -55,9 +49,11 @@ function generatePassword() {
 		return randomPassword;
 	}
 }
-// Write password to the #password input
+// Function will write password into the #password textarea with id #password
 function writePassword() {
+	// Call generate password function and store returned value into variable "password"
 	var password = generatePassword();
+	// Select textarea with id #password and store reference in variable "passwordText"
 	var passwordText = document.querySelector('#password');
 	// if the password returned is null, we need to tell the user the unfortunate truth of their decisions... there is no password generated :(
 	if (password === null) passwordText.value = "You can't generate a password without characters...";
@@ -67,3 +63,5 @@ function writePassword() {
 }
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+// Only used 40 lines of code
