@@ -15,7 +15,9 @@ NOTE: If you don't like the randomly generated password it gives you, keep gener
 
 ![pseudo random password generator screenshot](./assets/images/pw_generator2.png)
 
+[Link To Project on GitHub Pages](https://damienluzzo33.github.io/password-generator-js/)
+
 ## Other
 
-+ Some of this project was done alongside Cole Cochran and Christoper Kennard
++ Some of this project was done alongside Cole Cochran and Christopher Kennard
 + Completed this project with the least amount of code possible
